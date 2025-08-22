@@ -9,12 +9,21 @@ variable_cadena = "Hola Mundo!"
 #Boolean
 variable_booleana = True
 
-nombre = input("Ingrese su nombre: ")
-print("Hola ", nombre)
-print(f"Hola {nombre}")
-
-edad = int(input("Ingrese edad: "))
-
+# nombre = input("Ingrese su nombre: ")
+# print("Tipo de dato de la variable nombre: ", type(nombre))
+# # print("Hola ", nombre)
+# print(f"Hola {nombre}")
+# print(f"======================================")
+# edad = int(input("Ingrese edad: "))
+# print(f"Edad: {edad}")
+#! =======================================
+# num_flot = 3.14
+# num_ent = int(num_flot)
+# print(f"El número {num_flot} convertido a entero es: {num_ent}")
+# num_text = str(num_ent)
+# print(f"El número {num_ent} convertido a texto es: {num_text}")
+# otro_flot = float(num_text)
+# print(f"El número {num_text} convertido a flotante es: {otro_flot}")
 # if edad >= 18:
 #     print("Es mayor de edad... ")
 # else:
@@ -47,5 +56,18 @@ edad = int(input("Ingrese edad: "))
 # #print(f"El resultado de la suma es: {resultado_suma}")
 
 # print(f"El resultado de la suma es: {numero_1 + numero_2}, y la resta es: {numero_1 - numero_2}")
+
+
+# TODO ============================================
+a = 4
+b = 5
+c = 0
+
+def suma(num1, num2):
+    resultado = num1 + num2 
+    return resultado
+
+
+print (suma(a,b))
 
 
