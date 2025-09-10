@@ -1,0 +1,7 @@
+setup.py
+ModFunc.egg-info/PKG-INFO
+ModFunc.egg-info/SOURCES.txt
+ModFunc.egg-info/dependency_links.txt
+ModFunc.egg-info/top_level.txt
+paquete/__init__.py
+paquete/modulo.py

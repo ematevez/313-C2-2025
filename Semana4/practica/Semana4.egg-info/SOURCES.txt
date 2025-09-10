@@ -1,0 +1,7 @@
+setup.py
+Semana4.egg-info/PKG-INFO
+Semana4.egg-info/SOURCES.txt
+Semana4.egg-info/dependency_links.txt
+Semana4.egg-info/top_level.txt
+paquete/__init__.py
+paquete/modulo.py

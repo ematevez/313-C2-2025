@@ -1,0 +1,1 @@
+from .modulo import saludar, calcular_cuadrado, es_par
