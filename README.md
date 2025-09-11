@@ -3,7 +3,7 @@ Programacion-1 UTN
 
 
 Aca vamos a subir todo formato N° Legajo - Apellido
-
+Subsanando issue #1
 
 
 ### PYTHON !!! 
