@@ -10,10 +10,10 @@ print("*--" * 20)
 mi_lista.append("nuevo")
 print("append: ", mi_lista)
 print("--" * 20)
-mi_lista.insert(2,"insertado2")
+mi_lista.insert(2,[1,2,3,['a','b'],5])  # Por mas que sea una lista de listas no deja de ser un elemento
 print("insert: ", mi_lista)
 print("--" * 20)
-mi_lista.extend([7, 'f'])
+mi_lista.extend([1,2,3,['a','b'],5])
 print("extend: ", mi_lista)
 print("--" * 20)
 
@@ -25,7 +25,7 @@ print("--" * 20)
 mi_lista.remove('a')
 print("remove: ", mi_lista)
 print("--" * 20)
-mi_lista.pop(1)
+mi_lista.pop(4)
 print("pop: ", mi_lista)
 print("--" * 20)
 mi_lista.clear()
@@ -35,7 +35,7 @@ print("clear: ", mi_lista)
 new_lista = [1, 2, 3, 'elefante',2, 4, 'elefante']
 # index(x[, start[, end]]) → devuelve el índice de la primera aparición de x.
 # count(x) → devuelve cuántas veces aparece x.
-print("--" * 20)
+# print("--" * 20)
 print("index: ", new_lista.index('elefante'))
 print("contador: ", new_lista.count('elefante'))
 print("--" * 20)
@@ -54,6 +54,21 @@ lista_numeros.sort(reverse=True) # ordena la lista de mayor a menor
 #? https://docs.python.org/es/3/howto/sorting.html
 print("sorted list: ", sorted(['z','a','x','b'])) 
 
+palabras = ['javascript', 'java', 'c', 'go', 'python']
+ordenado_por_longitud = sorted(palabras, key=len)
+print(ordenado_por_longitud)  # ['c', 'go', 'java', 'python', 'javascript']
+
+nums = [10, -5, 3, -20]
+# Ordenar por el valor absoluto
+print(sorted(nums, key=abs))
+
+# ➡️ La función abs devuelve el valor absoluto, por eso -5 queda antes que 10.
+
+# key es una función que transforma cada elemento en “la cosa por la que quiero ordenar”.
+# Python llama a esa función una sola vez por elemento, usa ese resultado para ordenar,
+# y al final te devuelve los elementos originales en el nuevo orden.
+
+
 print("sort numeros: ", lista_numeros)
 print("sort strings: ", lista_strings)
 print("--" * 20)
@@ -67,7 +82,7 @@ print("copialo_list Final: ", copiado_list)
 lista_strings[0] = "rinoceronte"
 print("copialo_list modificado: ", copiado_list)
 
-print("--" * 20)
+# print("--" * 20)
 
 #! Otras operaciones útiles
 # len(lista) → longitud de la lista.
@@ -84,7 +99,7 @@ print("muesta máximo de la lista: ", max(otra_lista_numeros))
 print("muesta minimo de la lista: ", min(otra_lista_numeros))
 
 print("len de la lista: ", len(otra_lista_strings))
-# print("suma la lista: ", sum(otra_lista_strings)) #!ROMPE
+# # print("suma la lista: ", sum(otra_lista_strings)) #!ROMPE
 print("muesta máximo de la lista: ", max(otra_lista_strings))
 print("muesta minimo de la lista: ", min(otra_lista_strings))
 
@@ -96,10 +111,4 @@ otra_lista_strings1.sort()
 print("ordena las palabras: ", otra_lista_strings1)
 
 
-#! Ejemplos sencillos para practicar
-# Crear una lista con números del 1 al 5, agregar el 6, y luego eliminar el 2.
-# Crear una lista con nombres de tus amigos y ordenarla alfabéticamente.
-# Contar cuántas veces aparece el número 3 en una lista.
-# Invertir una lista de frutas.
-# Hacer la suma de todos los números en una lista.
 

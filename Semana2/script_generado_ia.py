@@ -1,93 +1,77 @@
+import pymongo
 
-import math
-import os
-import time
+client = pymongo.MongoClient("mongodb://localhost:27017/")
+db = client["1509"]
+col = db["lunes"]
 
-def limpiar_pantalla():
-    os.system('cls' if os.name == 'nt' else 'clear')
+def mostrar_menu():
+    print("\nMenú:")
+    print("1. Agregar documento")
+    print("2. Editar documento")
+    print("3. Borrar documento")
+    print("4. Listar documentos")
+    print("5. Salir")
 
-def sumar(a, b):
-  return a + b
+def agregar_documento():
+    try:
+        nombre = input("Ingrese el nombre del documento: ")
+        valor = int(input("Ingrese el valor del documento: "))  # Asegurarse de que el valor sea un entero
+        nuevo_documento = {"name": nombre, "value": valor}
+        inserted_id = col.insert_one(nuevo_documento).inserted_id
+        print(f"Documento agregado con ID: {inserted_id}")
+    except ValueError:
+        print("Error: El valor debe ser un número entero.")
+    except Exception as e:
+        print(f"Error al agregar el documento: {e}")
 
-def restar(a, b):
-  return a - b
-
-def dividir(a, b):
-  if b == 0:
-    return "Error: División por cero"
-  return a / b
-
-def seno(a):
-  return math.sin(math.radians(a))
-
-def coseno(a):
-  return math.cos(math.radians(a))
-
-def dibujar_grafica(funcion, nombre_funcion):
-    """Dibuja una aproximación de la función en la consola."""
-    maximo = 1.0
-    minimo = -1.0
-    ancho = 40  # Ajusta el ancho de la gráfica
-    for y in range(int(minimo * 10), int(maximo * 10) + 1):
-        linea = ""
-        for x in range(ancho):
-            valor_x = (x / ancho) * 360 - 180  # Ajusta el rango de x
-            valor_y = funcion(valor_x)
-            if (y / 10) <= valor_y < ((y + 1) / 10):  #Compara rangos para dibujar punto
-                linea += "*"
-            else:
-                linea += " "
-        print(linea)
-    print(f"Gráfica de {nombre_funcion}")
+def editar_documento():
+    try:
+        id_documento = input("Ingrese el ID del documento a editar: ")
+        nuevo_valor = int(input("Ingrese el nuevo valor: ")) # Asegurarse de que el valor sea un entero
+        result = col.update_one({"_id": pymongo.ObjectId(id_documento)}, {"$set": {"value": nuevo_valor}})
+        if result.modified_count > 0:
+            print("Documento actualizado correctamente.")
+        else:
+            print("No se encontró ningún documento con ese ID.")
+    except ValueError:
+        print("Error: El valor debe ser un número entero.")
+    except Exception as e:
+        print(f"Error al editar el documento: {e}")
 
 
-def pantalla_inicio():
-    limpiar_pantalla()
-    print("\033[92m  _.--""--._                     \033[0m")
-    print("\033[92m /         \\                    \033[0m")
-    print("\033[92m|  O   O   |   CALCULADORA     \033[0m")
-    print("\033[92m \\     _    /                    \033[0m")
-    print("\033[92m  `-----'                      \033[0m")
-    print("\033[91m-----------------------------------\033[0m")
-    time.sleep(2)  # Esperar 2 segundos
-    limpiar_pantalla()
+def borrar_documento():
+    try:
+        id_documento = input("Ingrese el ID del documento a borrar: ")
+        result = col.delete_one({"_id": pymongo.ObjectId(id_documento)})
+        if result.deleted_count > 0:
+            print("Documento borrado correctamente.")
+        else:
+            print("No se encontró ningún documento con ese ID.")
+    except Exception as e:
+        print(f"Error al borrar el documento: {e}")
 
+def listar_documentos():
+    try:
+        for doc in col.find():
+            print(doc)
+    except Exception as e:
+        print(f"Error al listar documentos: {e}")
 
 while True:
-  pantalla_inicio()
-  print("\033[91m1. \033[0mSumar")
-  print("\033[92m2. \033[0mRestar")
-  print("\033[91m3. \033[0mDividir")
-  print("\033[92m4. \033[0mSeno")
-  print("\033[91m5. \033[0mCoseno")
-  print("\033[92m6. \033[0mSalir")
+    mostrar_menu()
+    opcion = input("Seleccione una opción: ")
 
-  opcion = input("Selecciona una operación (1-6): ")
-
-  try:
-    opcion = int(opcion)
-    if opcion == 1:
-      a = float(input("Primer número: "))
-      b = float(input("Segundo número: "))
-      print("Resultado:", sumar(a, b))
-    elif opcion == 2:
-      a = float(input("Primer número: "))
-      b = float(input("Segundo número: "))
-      print("Resultado:", restar(a, b))
-    elif opcion == 3:
-      a = float(input("Primer número: "))
-      b = float(input("Segundo número: "))
-      print("Resultado:", dividir(a, b))
-    elif opcion == 4:
-      dibujar_grafica(seno, "Seno")
-    elif opcion == 5:
-      dibujar_grafica(coseno, "Coseno")
-    elif opcion == 6:
-      break
+    if opcion == "1":
+        agregar_documento()
+    elif opcion == "2":
+        editar_documento()
+    elif opcion == "3":
+        borrar_documento()
+    elif opcion == "4":
+        listar_documentos()
+    elif opcion == "5":
+        break
     else:
-      print("Opción inválida")
-  except ValueError:
-    print("Entrada inválida. Por favor, ingresa un número.")
+        print("Opción inválida.")
 
-  input("Presiona Enter para continuar...") #Pausa antes de limpiar la pantalla
-  limpiar_pantalla()
+client.close()
