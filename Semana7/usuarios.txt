@@ -1,0 +1,14 @@
+{
+    "ema@ema.com": {
+        "nombre": "Ema",
+        "password": "ema"
+    },
+    "enzo": {
+        "nombre": "Enzo",
+        "password": "123"
+    },
+    "ema@hotmail.com": {
+        "nombre": "Emanuell",
+        "password": "123"
+    }
+}

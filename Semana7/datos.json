@@ -1,0 +1,104 @@
+[
+    {
+        "codigo": "001",
+        "titulo": "Bad Romance",
+        "colaboradores": [],
+        "vistas": 1200000000,
+        "duracion": 295,
+        "link": "https://youtu.be/qrO4YZeyl0I",
+        "fecha": "2009-11-23"
+    },
+    {
+        "codigo": "002",
+        "titulo": "Shallow",
+        "colaboradores": ["Bradley Cooper"],
+        "vistas": 2200000000,
+        "duracion": 215,
+        "link": "https://youtu.be/bo_efYhYU2A",
+        "fecha": "2018-09-27"
+    },
+    {
+        "codigo": "003",
+        "titulo": "Rain on Me",
+        "colaboradores": ["Ariana Grande"],
+        "vistas": 850000000,
+        "duracion": 210,
+        "link": "https://youtu.be/AoAm4om0wTs",
+        "fecha": "2020-05-22"
+    },
+    {
+        "codigo": "004",
+        "titulo": "Poker Face",
+        "colaboradores": [],
+        "vistas": 1000000000,
+        "duracion": 239,
+        "link": "https://youtu.be/bes9Y0pzyuo",
+        "fecha": "2008-09-26"
+    },
+    {
+        "codigo": "005",
+        "titulo": "Just Dance",
+        "colaboradores": ["Colby O'Donis"],
+        "vistas": 900000000,
+        "duracion": 242,
+        "link": "https://youtu.be/2Abk1jAONjw",
+        "fecha": "2008-04-08"
+    },
+    {
+        "codigo": "006",
+        "titulo": "Telephone",
+        "colaboradores": ["Beyoncé"],
+        "vistas": 400000000,
+        "duracion": 272,
+        "link": "https://youtu.be/EVBsypHzF3U",
+        "fecha": "2010-03-15"
+    },
+    {
+        "codigo": "007",
+        "titulo": "Born This Way",
+        "colaboradores": [],
+        "vistas": 350000000,
+        "duracion": 260,
+        "link": "https://youtu.be/wV1FrqwZyKw",
+        "fecha": "2011-02-11"
+    },
+    {
+        "codigo": "008",
+        "titulo": "Stupid Love",
+        "colaboradores": [],
+        "vistas": 170000000,
+        "duracion": 244,
+        "link": "https://youtu.be/5L6xyaeiV58",
+        "fecha": "2020-02-28"
+    },
+    {
+        "codigo": "009",
+        "titulo": "Always Remember Us This Way",
+        "colaboradores": [],
+        "vistas": 600000000,
+        "duracion": 234,
+        "link": "https://youtu.be/cr2R9N6T3yA",
+        "fecha": "2018-10-19"
+    },
+    {
+        "codigo": "010",
+        "titulo": "Hold My Hand",
+        "colaboradores": [],
+        "vistas": 250000000,
+        "duracion": 229,
+        "link": "https://youtu.be/O2CIAKVTOrc",
+        "fecha": "2022-05-06"
+    },
+    {
+        "codigo": "011",
+        "titulo": "T",
+        "colaboradores": [
+            "B"
+        ],
+        "vistas": 4000,
+        "duracion": 2,
+        "link": "https://youtu.be/LLLLLLLL",
+        "fecha": "2025-03-15"
+    }
+]
+    
