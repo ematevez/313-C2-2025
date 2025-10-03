@@ -5,7 +5,7 @@ import tracemalloc
 # =============================
 # Algoritmos de Ordenamiento #!SELECTION_SORT
 # =============================
-
+#
 def selection_sort(arr):
     for i in range(len(arr)):
         min_idx = i
