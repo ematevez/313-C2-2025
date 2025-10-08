@@ -8,7 +8,15 @@ import time
 
 # ==== CONFIG MEDIAPIPE ====
 mp_face_mesh = mp.solutions.face_mesh
-face_mesh = mp.solutions.face_mesh.FaceMesh(refine_landmarks=True)
+# face_mesh = mp.solutions.face_mesh.FaceMesh(refine_landmarks=True)
+mp_face_mesh = mp.solutions.face_mesh
+face_mesh = mp_face_mesh.FaceMesh(
+    static_image_mode=False,
+    max_num_faces=1,
+    refine_landmarks=True,
+    min_detection_confidence=0.5,
+    min_tracking_confidence=0.5
+)
 
 cap = cv2.VideoCapture(0)
 last_blink_time = 0
