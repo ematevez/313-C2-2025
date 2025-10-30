@@ -1,0 +1,38 @@
+{
+  "timestamp": "2025-10-30T20:06:09.349389",
+  "platform": {
+    "system": "Windows",
+    "node": "DESKTOP-5T7TFT8",
+    "release": "10",
+    "version": "10.0.26100",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel"
+  },
+  "cpu": {
+    "physical_cores": 6,
+    "total_cores": 8,
+    "freq": {
+      "current": 1200.0,
+      "min": 0.0,
+      "max": 1200.0
+    },
+    "cpu_percent": 34.6
+  },
+  "memory": {
+    "total": 16912302080,
+    "available": 4248125440,
+    "used": 12664176640,
+    "percent": 74.9
+  },
+  "disk": [
+    {
+      "device": "C:\\",
+      "mountpoint": "C:\\",
+      "fstype": "NTFS",
+      "total": 498973274112,
+      "used": 282398785536,
+      "free": 216574488576,
+      "percent": 56.6
+    }
+  ]
+}
