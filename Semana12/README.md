@@ -7,8 +7,7 @@ https://github.com/mandaw2014/Rally.git
 https://github.com/MysteryCoder456/UrsinaFPS.git
 
 
-| Repositorio                                                                                                                   | Género / nivel          | Qué contiene y por qué puede servir                                                                                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
 | Ursina-Projects (por DawoodLaiq) — GitHub: “Basic games created on the Ursina Engine”. ([GitHub][1])                          | Intermedio-bajo         | Colección de varios juegos sencillos: “Build and Destroy”, “Breakout”, “Maze Game”, “Skipping Stone”, etc. Ideal para que los alumnos vean distintos géneros y luego modifiquen alguno.             |
 | UrsinaFPS (por MysteryCoder456) — GitHub: “Multiplayer FPS game made in Ursina Engine”. ([GitHub][2])                         | Avanzado                | Juego tipo shooter en primera persona, incluye movimiento 3D, colisiones, aspecto red/multijugador. Muy bueno si querés ir hacia un nivel más desafiante.                                           |
 | Ursina‑Engine‑Panda3D‑Games (por imvickykumar999) — GitHub: colección de juegos variados con Ursina + Panda3D. ([GitHub][3])  | Variedad de niveles     | Permite explorar múltiples estilos de juego (2D, 3D, plataformas, etc.). Ideal como “biblioteca de ejemplos” para que los alumnos elijan qué tipo les interesa desarrollar o modificar.             |
