@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>NeuralReader Web</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
+  <script defer src="/static/script.js"></script>
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center p-6">
+  <h1 class="text-3xl font-bold mb-4">🧠 NeuralReader Web</h1>
+
+  <form id="uploadForm" class="mb-6">
+    <input type="file" name="file" accept=".pdf" required class="text-black">
+    <button type="submit" class="bg-green-500 p-2 rounded ml-2">Cargar y Entrenar</button>
+  </form>
+
+  <div id="status" class="mb-6"></div>
+
+  <form id="askForm">
+    <input type="text" name="q" placeholder="Preguntale a tu neurona..." class="text-black p-2 w-80">
+    <button type="submit" class="bg-blue-500 p-2 rounded ml-2">Preguntar</button>
+  </form>
+
+  <div id="response" class="mt-4 p-4 bg-gray-800 rounded w-96"></div>
+</body>
+</html>
