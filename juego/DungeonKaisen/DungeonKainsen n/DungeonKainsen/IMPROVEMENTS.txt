@@ -1,0 +1,63 @@
+IMPROVEMENTS (ideas & prioritized list)
+--------------------------------------
+
+1) Zoom HUD and reset control
+   - Display current zoom % on screen.
+   - Add key (X) to reset zoom to 1.0.
+   - Add smooth animated zoom (lerp) option.
+
+2) Camera smoothing presets
+   - Provide options for "strict center", "smooth follow" and "deadzone" in settings or an in-game options menu.
+
+3) Performance & LOD
+   - Adjust CHUNK_SIZE and CACHE_RADIUS_CHUNKS in core/world.py based on zoom level.
+   - Implement simple LOD: when zoomed out, skip drawing detailed tiles (draw aggregated blocks).
+
+4) Tile rendering optimization
+   - Batch tile drawing into a single surface per chunk and blit chunk surfaces, rather than per-tile rect draws.
+   - Use sprite sheets and blit subsurfaces for repeated tiles.
+
+5) Player sprite & animation
+   - Replace rectangle with sprite and animations (idle/walk/attack).
+   - Use the PIXELS_PER_METER constant to determine sprite size and align feet to tile grid.
+
+6) Save system improvements
+   - Multiple save slots, autosave toggle and rollback.
+   - Save world generation params (major_spacing_m etc.) for reproducibility.
+
+7) Camera world bounds
+   - Prevent showing empty negative world; clamp camera to realistic world bounds derived from generation limits.
+
+8) HUD and accessibility
+   - Add scalable UI, font size option and color contrast modes.
+   - Add remappable keybindings.
+
+9) Enemy & AI improvements
+   - Implement pathfinding (A*) on a coarse grid for enemies.
+   - Add state machines (patrol, chase, attack, flee).
+
+10) Testing and CI
+    - Add unit tests for world tile generation and camera math.
+    - Integrate CI (GitHub Actions) to run lint & basic tests.
+
+11) Asset pipeline & packaging
+    - Add asset folder structure, loader, and fallback placeholders.
+    - Package with pyinstaller for distribution.
+
+12) Visual polish
+    - Lighting & fog of war, particle effects for hits, and weather.
+    - Audio mixing and distance-based sound attenuation.
+
+13) Config file & debug tools
+    - Add a json/yaml config to change PIXELS_PER_METER, METERS_PER_TILE, major_spacing_m quickly.
+    - Add an in-game debug overlay: show FPS, loaded chunks, memory usage.
+
+14) World variety
+    - Add biome rules, procedural landmarks, and points of interest.
+    - City generation: parks, plazas, rivers with bridges.
+
+15) Multiplayer & persistence (long-term)
+    - Server authoritative world generation and persistence.
+    - Sync player positions and state via simple socket or WebRTC.
+
+Each of these items could be expanded into task-level issues. Prioritize by playability (camera/zoom/HUD), performance (chunk LOD and chunk drawing), and visual feedback (sprites & audio).
